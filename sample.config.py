@@ -26,7 +26,8 @@ class Config(object):
     #########################################################################
     DATABASE_CONFIG = {
         'server': 'localhost',
+        'port': 'dbport',
+        'name': 'dbname',
         'user': 'dbuser',
         'password': 'password',
-        'name': 'dbname',
         }
