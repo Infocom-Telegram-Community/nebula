@@ -30,6 +30,11 @@ else
     export MYSQL_DATABASE="nebula"
 fi
 
+if [ -n "$DATABASE_PORT" ]
+then
+    echo "port=$DATABASE_PORT" >> /etc/mysql/conf.d/docker.cnf
+fi
+
 for FILE in $(find /docker-entrypoint-initdb.d | grep -i "[.]sql")
 do
     sed -i "s;%DATABASE%;$DATABASE_NAME;g" "$FILE"

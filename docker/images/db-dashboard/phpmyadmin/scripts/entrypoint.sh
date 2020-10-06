@@ -29,6 +29,13 @@ else
     exit 500
 fi
 
+if [ -n "$DATABASE_PORT" ]
+then
+    export PMA_PORT="$DATABASE_PORT"
+fi
+
+
+
 IP=$(ip route get 8.8.8.8 | sed -n 's|^.*src \(.*\)$|\1|gp' | awk '{print $1}')
 echo "Service IP Address: $IP"
 

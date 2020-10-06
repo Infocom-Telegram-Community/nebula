@@ -43,9 +43,10 @@ cat "/opt/scripts/templates/config.tmp.py" \
     | sed "s;%OPENWEATHER_API%;$OPENWEATHER_API;g" \
     \
     | sed "s;%DATABASE_SERVER%;$DATABASE_SERVER;g" \
+    | sed "s;%DATABASE_PORT%;$DATABASE_PORT;g" \
+    | sed "s;%DATABASE_NAME%;$DATABASE_NAME;g" \
     | sed "s;%DATABASE_USERNAME%;$DATABASE_USERNAME;g" \
     | sed "s;%DATABASE_PASSWORD%;$DATABASE_PASSWORD;g" \
-    | sed "s;%DATABASE_NAME%;$DATABASE_NAME;g" \
     \
     > "/opt/data/repository/config.py"
 

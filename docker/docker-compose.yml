@@ -25,6 +25,7 @@ services:
             OPENWEATHER_API: $OPENWEATHER_API
 
             DATABASE_SERVER: $DATABASE_SERVER
+            DATABASE_PORT: $DATABASE_PORT
             DATABASE_NAME: $DATABASE_NAME
             DATABASE_USERNAME: $DATABASE_USERNAME
             DATABASE_PASSWORD: $DATABASE_PASSWORD
@@ -57,6 +58,7 @@ services:
             restart_policy:
                 condition: on-failure
         environment:
+            DATABASE_PORT: $DATABASE_PORT
             DATABASE_NAME: $DATABASE_NAME
             DATABASE_USERNAME: $DATABASE_USERNAME
             DATABASE_PASSWORD: $DATABASE_PASSWORD
@@ -72,6 +74,7 @@ services:
                 condition: on-failure
         environment:
             DATABASE_SERVER: $DATABASE_SERVER
+            DATABASE_PORT: $DATABASE_PORT
             DATABASE_USERNAME: $DATABASE_USERNAME
             DATABASE_PASSWORD: $DATABASE_PASSWORD
 

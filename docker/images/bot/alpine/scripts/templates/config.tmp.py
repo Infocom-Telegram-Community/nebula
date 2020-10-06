@@ -25,9 +25,10 @@ class Config(object):
     #########################################################################
     DATABASE_CONFIG = {
         "server": "%DATABASE_SERVER%",
+        "port": "%DATABASE_PORT%".
+        "name": "%DATABASE_NAME%",
         "user": "%DATABASE_USERNAME%",
         "password": "%DATABASE_PASSWORD%",
-        "name": "%DATABASE_NAME%",
     }
 
     LOAD_PLUGINS = True
