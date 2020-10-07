@@ -7,7 +7,8 @@ class Connection:
             Config.DATABASE_CONFIG['server'],
             Config.DATABASE_CONFIG['user'],
             Config.DATABASE_CONFIG['password'],
-            Config.DATABASE_CONFIG['name']
+            Config.DATABASE_CONFIG['name'],
+            Config.DATABASE_CONFIG['port']
             )
         self.db.autocommit(True)
         self.db.set_character_set('utf8mb4')
