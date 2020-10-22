@@ -9,6 +9,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4988792a122f410bb6ef1bbca6c3d6ad)](https://www.codacy.com/gh/Squirrel-Network/nebula?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Infocom-Telegram-Community/nebula&amp;utm_campaign=Badge_Grade)
 
 ---
+
+# This bot is no longer maintained, patches are made from time to time. The new bot is developed here: https://github.com/Squirrel-Network/nebula8
+
 ## How to start
 
 <b>Clone this repo:</b> ```git clone https://github.com/Squirrel-Network/nebula.git```
