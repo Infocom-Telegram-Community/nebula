@@ -6,7 +6,7 @@ class Config(object):
     BOT_USER = " @thenebula_bot"
     BOT_NAME = "nebula"
     AUTHOR = " SquirrelNetwork"
-    VERSION = " 7.7.14(Glaceon)"
+    VERSION = " 7.7.17(Glaceon)"
     SOURCE = "https://github.com/Squirrel-Network/nebula"
     LOAD_PLUGINS = True
     #########################################################################
