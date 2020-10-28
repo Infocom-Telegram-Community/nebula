@@ -6,15 +6,21 @@ class Config(object):
     BOT_USER = " @thenebula_bot"
     BOT_NAME = "nebula"
     AUTHOR = " SquirrelNetwork"
-    VERSION = " 7.7.17(Glaceon)"
+    VERSION = " 7.7.18(Glaceon)"
     SOURCE = "https://github.com/Squirrel-Network/nebula"
     LOAD_PLUGINS = True
     #########################################################################
     #                            TELEGRAM CONFIG                            #
     #########################################################################
     STAFF_GROUP = -123456789101112
-    ADMIN_ID = [123456789]
-    OWNER = [123456789]
+    SUPERADMIN = {
+        'foo': 123456789,
+        'bar': 123456789
+    }
+    OWNER = {
+        'foo': 123456789,
+        'bar': 123456789
+    }
     LOG_CHANNEL = -123456789101112
     #########################################################################
     #                            API CONFIG                                 #
@@ -26,7 +32,7 @@ class Config(object):
     #########################################################################
     DATABASE_CONFIG = {
         'server': 'localhost',
-        'port': 'dbport',
+        'port': 3306,
         'name': 'dbname',
         'user': 'dbuser',
         'password': 'password',

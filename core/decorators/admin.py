@@ -4,7 +4,7 @@ from functools import wraps
 from telegram import Chat, ChatMember
 
 DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
-LIST_OF_ADMINS = Config.ADMIN_ID
+LIST_OF_ADMINS = list(Config.SUPERADMIN.values())
 
 #Old Function
 def init(func):

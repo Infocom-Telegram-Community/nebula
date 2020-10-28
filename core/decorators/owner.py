@@ -1,6 +1,6 @@
 from config import Config
 from functools import wraps
-OWNER_LIST= Config.OWNER
+OWNER_LIST = list(Config.OWNER.values())
 def init(func):
     @wraps(func)
     def wrapped(update, context):
