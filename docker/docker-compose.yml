@@ -17,7 +17,7 @@ services:
             SOURCE: $REPOSITORY_URL
 
             STAFF_GROUP: $STAFF_GROUP
-            ADMIN_ID: $ADMIN_ID
+            SUPERADMIN: $SUPERADMIN
             OWNER: $OWNER
             LOG_CHANNEL: $LOG_CHANNEL
 

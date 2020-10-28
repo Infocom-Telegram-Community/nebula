@@ -35,7 +35,7 @@ cat "/opt/scripts/templates/config.tmp.py" \
     | sed "s;%SOURCE%;$SOURCE;g" \
     \
     | sed "s;%STAFF_GROUP%;$STAFF_GROUP;g" \
-    | sed "s;%ADMIN_ID%;$ADMIN_ID;g" \
+    | sed "s;%SUPERADMIN%;$SUPERADMIN;g" \
     | sed "s;%OWNER%;$OWNER;g" \
     | sed "s;%LOG_CHANNEL%;$LOG_CHANNEL;g" \
     \

@@ -12,7 +12,7 @@ class Config(object):
     #                            TELEGRAM CONFIG                            #
     #########################################################################
     STAFF_GROUP = %STAFF_GROUP%
-    ADMIN_ID = %ADMIN_ID%
+    SUPERADMIN = %SUPERADMIN%
     OWNER = %OWNER%
     LOG_CHANNEL = %LOG_CHANNEL%
     #########################################################################
