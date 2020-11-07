@@ -1,9 +1,17 @@
 import core.decorators
-from core.sql.repository.group import GroupRepository
+from core.sql.db_connect import Connection
+from core.utility.strings import str_service
 
 @core.decorators.owner.init
 def init(update, context):
-    chat = update.effective_message.chat_id
-    row = GroupRepository().getById([chat])
-    message = "{}".format(row[0])
-    context.bot.send_message(chat,message)
+    connector = Connection()
+    chatid = str(update.effective_chat.id)
+    community = 1
+    welcome = str_service.DEFAULT_WELCOME
+    rules = "https://github.com/Squirrel-Network/GroupRules"
+    language = "IT"
+    query = "INSERT INTO groups(id_group, welcome_text, rules_text, community, languages) VALUES(%s,%s,%s,%s,%s)"
+    connector.cur.execute(query,(chatid,welcome,rules,community,language))
+    connector.db.commit()
+    connector.cur.close()
+    connector.db.close()

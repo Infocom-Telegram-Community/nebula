@@ -7,7 +7,7 @@ from core.sql.commands_sql import Sql_Insert_BW
 def init(update, context):
     message = update.message.text[8:].strip()
     connector = Connection()
-    chatid = str(update.message.chat_id)
+    chatid = str(update.effective_chat.id)
     query = Sql_Insert_BW.SQL
     connector.cur.execute(query,[message,chatid])
     connector.db.commit()
