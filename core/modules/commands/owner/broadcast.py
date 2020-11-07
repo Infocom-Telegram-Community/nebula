@@ -6,8 +6,9 @@ def init(update, context):
     bot = context.bot
     message = update.message.text[2:]
     connector = Connection()
-    query = "SELECT id_group FROM groups"
+    query = "SELECT * FROM groups"
     connector.cur.execute(query)
     rows = connector.cur.fetchall()
     for a in rows:
-        bot.send_message(a,message,parse_mode='HTML')
+        chatid = a[1]
+        bot.send_message(chatid,message,parse_mode='HTML')
