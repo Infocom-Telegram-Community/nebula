@@ -5,12 +5,9 @@ from core.sql.db_connect import Connection
 def init(update, context):
     bot = context.bot
     message = update.message.text[2:]
-    chat = update.effective_chat.id
     connector = Connection()
-    query = "SELECT * FROM groups WHERE id_group = %s"
-    connector.cur.execute(query,[chat])
+    query = "SELECT id_group FROM groups"
+    connector.cur.execute(query)
     rows = connector.cur.fetchall()
-    for group in rows:
-        print(group[1])
-        chatid = group[1]
-        bot.send_message(chatid,message,parse_mode='HTML')
+    for a in rows:
+        bot.send_message(a,message,parse_mode='HTML')
