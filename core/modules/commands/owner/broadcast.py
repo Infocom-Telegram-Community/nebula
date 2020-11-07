@@ -1,7 +1,7 @@
 import core.decorators
 from core.sql.db_connect import Connection
 
-#@core.decorators.owner.init
+@core.decorators.owner.init
 def init(update, context):
     bot = context.bot
     message = update.message.text[2:]
@@ -11,5 +11,6 @@ def init(update, context):
     connector.cur.execute(query,[chat])
     rows = connector.cur.fetchall()
     for group in rows:
+        print(group[1])
         chatid = group[1]
         bot.send_message(chatid,message,parse_mode='HTML')
